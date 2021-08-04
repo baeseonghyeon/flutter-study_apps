@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: ,
+                  width: 600,
                   child: leftColumn,
                 ),
                 mainImage,
