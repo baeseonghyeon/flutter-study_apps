@@ -24,31 +24,32 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.white,
       ),
       home: DefaultTabController(
-          length: 4,
-          child: SafeArea(
-            top: false,
-            child: Scaffold(
-              backgroundColor: Colors.black,
-              body: TabBarView(
-                physics: NeverScrollableScrollPhysics(),
-                children: <Widget>[
-                  HomeScreen(),
-                  Container(
-                    child: Center(
-                      child: Text('search'),
-                    ),
+        length: 4,
+        child: SafeArea(
+          top: false,
+          child: Scaffold(
+            backgroundColor: Colors.black,
+            body: TabBarView(
+              physics: NeverScrollableScrollPhysics(),
+              children: <Widget>[
+                HomeScreen(),
+                Container(
+                  child: Center(
+                    child: Text('search'),
                   ),
-                  Container(
-                    child: Center(
-                      child: Text('save'),
-                    ),
+                ),
+                Container(
+                  child: Center(
+                    child: Text('save'),
                   ),
-                  MoreScreen(),
-                ],
-              ),
-              bottomNavigationBar: BottomBar(),
+                ),
+                MoreScreen(),
+              ],
             ),
-          )),
+            bottomNavigationBar: BottomBar(),
+          ),
+        ),
+      ),
     );
   }
 }
