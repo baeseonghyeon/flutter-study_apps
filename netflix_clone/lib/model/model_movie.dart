@@ -18,8 +18,7 @@ class Movie {
         like = map['like'];
 
   // Movie.fromSnapshot(DocumentSnapshot snapshot)
-  //     : this.fromMap(snapshot.data() as Map<String, dynamic>,
-  //           reference: snapshot.reference);
+  //     : this.fromMap(snapshot.data(), reference: snapshot.reference);
 
   @override
   String toString() => "Movie<$title:$keyword>";

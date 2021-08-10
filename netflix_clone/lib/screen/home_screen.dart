@@ -1,3 +1,4 @@
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix/model/model_movie.dart';
 import 'package:netflix/widget/box_slider.dart';
@@ -10,6 +11,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // FirebaseFirestore fireStore = FirebaseFirestore.instance;
+  // late Stream<QuerySnapshot> streamData;
+
   List<Movie> movies = [
     Movie.fromMap({
       'title': '사랑의 불시착',
@@ -42,13 +46,46 @@ class _HomeScreenState extends State<HomeScreen> {
     })
   ];
 
-  @override
-  void initState() {
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   streamData = fireStore.collection('movie').snapshots();
+  // }
+
+  // Widget _fetchData(BuildContext context) {
+  //   return StreamBuilder<QuerySnapshot>(
+  //     stream: FirebaseFirestore.instance.collection('movie').snapshots(),
+  //     builder: (context, snapshot) {
+  //       if (!snapshot.hasData) return LinearProgressIndicator();
+  //       return _buildBody(context, snapshot.data!.docs);
+  //     },
+  //   );
+  // }
+
+  // Widget _buildBody(BuildContext context
+  //     // , List<DocumentSnapshot> snapshot
+  //     ) {
+  //   // List<Movie> movies = snapshot.map((d) => Movie.fromSnapshot(d)).toList();
+  //   return ListView(
+  //     padding: EdgeInsets.only(bottom: 20),
+  //     children: <Widget>[
+  //       Stack(
+  //         // alignment: Alignment.topLeft,
+  //         children: <Widget>[
+  //           CarouselImage(movies: movies),
+  //           TopBar(),
+  //         ],
+  //       ),
+  //       CircleSlider(movies: movies),
+  //       BoxSlider(movies: movies)
+  //     ],
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
+    // return _fetchData(context);
+
     return ListView(
       padding: EdgeInsets.only(bottom: 20),
       children: <Widget>[
